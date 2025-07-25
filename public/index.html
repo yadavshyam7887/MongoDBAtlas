@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Student Registration Form</h1>
+  <form id="studentForm">
+    <input name="roll_no" placeholder="Roll No" required />
+    <input name="name" placeholder="Name" required />
+    <input name="age" type="number" placeholder="Age" required />
+    <input name="address" placeholder="Address" required />
+    <input name="pin_code" placeholder="Pin Code" required />
+
+    <select name="degree" required>
+      <option value="">Select Degree</option>
+      <option value="B.Tech">B.Tech</option>
+      <option value="M.Tech">M.Tech</option>
+      <option value="BCA">BCA</option>
+      <option value="MCA">MCA</option>
+      <option value="BA">BA</option>
+      <option value="MA">MA</option>
+    </select>
+
+    <!-- ✅ FIXED data-sitekey (not data-site key) -->
+    <div class="g-recaptcha" data-sitekey="6Ldlb4grAAAAAMKSHoe6t6IrcoXpUcY-0kuy-v7x"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>
