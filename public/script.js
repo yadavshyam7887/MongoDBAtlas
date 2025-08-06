@@ -6,14 +6,14 @@ document.getElementById("studentForm").addEventListener("submit", async function
   const formData = new FormData(this);
   const data = Object.fromEntries(formData.entries());
 
-  const recaptchaToken = grecaptcha.getResponse();
+  // const recaptchaToken = grecaptcha.getResponse();
 
-  if (!recaptchaToken){
-    alert("Please enter recaptcha");
-    return ;
-  }
+  // if (!recaptchaToken){
+  //   alert("Please enter recaptcha");
+  //   return ;
+  // }
 
-  data.recaptchaToken = recaptchaToken;
+  // data.recaptchaToken = recaptchaToken;
 
   try {
     const response = await fetch("/api/submit", {
@@ -32,7 +32,7 @@ document.getElementById("studentForm").addEventListener("submit", async function
     
     alert(result.message);
     this.reset();
-    grecaptcha.reset();
+    // grecaptcha.reset();
   } catch (err) {
     console.error("❌ Network error:", err);
     alert("❌ Network error. Server not reachable or route missing.");
