@@ -35,7 +35,7 @@ app.use(express.json());
 app.use(express.static("public")); // serve HTML & JS
 
 // ✅ API to save form data
-app.post("/api/submit", async (req, res) => {
+app.post("/submit", async (req, res) => {
   try {
     const newUser = new User(req.body);
     await newUser.save();
